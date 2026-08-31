@@ -1,3 +1,12 @@
+
+
+
+
+
+
+
+
+
 ProductCode = int(input("Enter Product Code :"))
 ProductName = str(input("Enter Product Name :"))
 ProductStoke = int(input("Enter Product Stoke :"))
@@ -12,10 +21,11 @@ Inventory = {
 
 Inventorys.append(Inventory)
 print(Inventorys)
-# print("============")
-# print("Product Code :" , ProductCode)
-# print("Enter Product Name :" , ProductName)
-# print("Enter Product Stock :" , ProductStoke)
-# print("Enter Product Price :" , ProductPrice)
-# print(f"inventory : {ProductStoke} , \nAll price : {ProductStoke*ProductPrice}")
-# print("============")
+for i in Inventorys:
+    print("========== PRODUCTS ==========")
+    print("Product Code :" , Inventory["code"])
+    print("Enter Product Name :" , Inventory["name"])
+    print("Enter Product Stock :" , Inventory["stoke"])
+    print("Enter Product Price :" , ProductPrice)
+    print(f"inventory : {Inventory['stoke']} , \nAll price : {Inventory["stoke"]*Inventory['price']}")
+    print("==============================")

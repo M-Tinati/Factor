@@ -1,0 +1,7 @@
+print("============")
+# print("Product Code :" , ProductCode)
+# print("Enter Product Name :" , ProductName)
+# print("Enter Product Stock :" , ProductStoke)
+# print("Enter Product Price :" , ProductPrice)
+# print(f"inventory : {ProductStoke} , \nAll price : {ProductStoke*ProductPrice}")
+# print("============")
