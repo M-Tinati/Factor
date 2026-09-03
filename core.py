@@ -20,12 +20,16 @@ while product_count < 3:
     product_count += 1
 
 
+def calculate_total(stock, price):
+    total = stock * price 
+    return total
 
 for i in Inventorys:
-    print(f"========== PRODUCTS {len(i)} ==========")
+    result = calculate_total(i["stock"] , i["price"])
+    print(f"========== PRODUCTS ==========")
     print("Product Code :" , i["code"])
     print("Enter Product Name :" , i["name"])
     print("Enter Product Stock :" , i["stock"])
     print("Enter Product Price :" , i["price"])
-    print(f"product : {i['stock']} , \nAll price : ",)
+    print(f"product : {i['stock']} , \nAll price : {result}",)
     print("==============================")
