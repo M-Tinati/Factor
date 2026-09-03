@@ -1,27 +1,31 @@
-is_Active = 0
+product_count = 0
 Inventorys = []
 print("you should add 3 product information")
 
-while is_Active < 3:
-    ProductCode = str(input("Enter Product Code :"))
-    ProductName = str(input("Enter Product Name :"))
-    ProductStock = int(input("Enter Product Stoke :"))
-    ProductPrice = int(input("Enter Product Price :"))
+def input_user(code , name , stock , price):
     Inventory = {
-    "code" : ProductCode,
-    "name" : ProductName,
-    "stock" : ProductStock,
-    "price" : ProductPrice,
-    }
+        "code" : code,
+        "name" : name,
+        "stock" : stock,
+        "price" : price,
+        }
     Inventorys.append(Inventory)
+while product_count < 3:
+    ProductCode = input("Enter Product Code :")
+    ProductName = input("Enter Product Name :")
+    ProductStock = int(input("Enter Product Stock :"))
+    ProductPrice = int(input("Enter Product Price :"))
+    input_user(ProductCode,ProductName,ProductStock,ProductPrice)
     print(Inventorys)
-    is_Active += 1
+    product_count += 1
+
+
 
 for i in Inventorys:
-    print("========== PRODUCTS ==========")
+    print(f"========== PRODUCTS {len(i)} ==========")
     print("Product Code :" , i["code"])
     print("Enter Product Name :" , i["name"])
     print("Enter Product Stock :" , i["stock"])
     print("Enter Product Price :" , i["price"])
-    print(f"product : {i['stock']} , \nAll price : {i['stock'] * i['price']}")
+    print(f"product : {i['stock']} , \nAll price : ",)
     print("==============================")
