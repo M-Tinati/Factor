@@ -50,3 +50,16 @@ def search_product(name):
 search = input("Search by name: ")
 result = search_product(search)
 print(result)
+
+
+def search_code(code):
+    for product in Inventorys:
+        if product["code"] == code:
+            return product
+    
+    return "Product Not Found"
+        
+        
+search = input("Search by code: ")
+result = search_code(search)
+print(result)
