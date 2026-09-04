@@ -1,7 +1,13 @@
 product_count = 0
 Inventorys = []
 print("you should add 3 product information")
-
+def check_stock(stock):
+    if stock > 0:
+        return "Available"
+    elif stock == 0:
+        return "Out of Stock"
+    else:
+        return "Invalid"
 def input_user(code , name , stock , price):
     Inventory = {
         "code" : code,
@@ -26,10 +32,11 @@ def calculate_total(stock, price):
 
 for i in Inventorys:
     result = calculate_total(i["stock"] , i["price"])
+    stock_status = check_stock(i["stock"])
     print(f"========== PRODUCTS ==========")
     print("Product Code :" , i["code"])
     print("Enter Product Name :" , i["name"])
-    print("Enter Product Stock :" , i["stock"])
+    print("Stock Status :", stock_status)
     print("Enter Product Price :" , i["price"])
     print(f"product : {i['stock']} , \nAll price : {result}",)
     print("==============================")

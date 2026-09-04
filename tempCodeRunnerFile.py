@@ -1,19 +1,11 @@
-def show_product():
-    print("========== Factor ==========")
-    print("Product Management System")
-    print("===============================")
-    
-show_product()
+prices = [50, 120, 80, 300, 40, 200]
 
-def show_product(code , name):
-    print("Product Code:", code)
-    print("Product Name:" , name)
-    
-    
-show_product("PE110X10", "Polyethylene Pipe")
+result = filter(lambda x : x > 100,prices)
 
-def calculate_total(stock, price):
-    total = stock * price 
-    return total
-result = calculate_total(300,50)
-print(result)
+print(list(result))
+
+
+prices = [100, 200, 300, 400]
+
+result1 = [x * 2 for x in prices]
+print(result1)
