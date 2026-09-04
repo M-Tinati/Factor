@@ -7,5 +7,5 @@ print(list(result))
 
 prices = [100, 200, 300, 400]
 
-result1 = [x * 2 for x in prices]
+result1 = [x * 2 for x in prices if x > 100]
 print(result1)

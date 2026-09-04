@@ -40,3 +40,7 @@ for i in Inventorys:
     print("Enter Product Price :" , i["price"])
     print(f"product : {i['stock']} , \nAll price : {result}",)
     print("==============================")
+    search = input("search by name : ")
+
+    result = filter(lambda x : x == search , i["name"])
+    
