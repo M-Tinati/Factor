@@ -30,17 +30,23 @@ def calculate_total(stock, price):
     total = stock * price 
     return total
 
-for i in Inventorys:
+for index , i in enumerate(Inventorys , start=1):
     result = calculate_total(i["stock"] , i["price"])
     stock_status = check_stock(i["stock"])
     print(f"========== PRODUCTS ==========")
-    print("Product Code :" , i["code"])
+    print(f"{index}.Product Code :" , i["code"])
     print("Enter Product Name :" , i["name"])
     print("Stock Status :", stock_status)
     print("Enter Product Price :" , i["price"])
     print(f"product : {i['stock']} , \nAll price : {result}",)
     print("==============================")
-    search = input("search by name : ")
-
-    result = filter(lambda x : x == search , i["name"])
     
+def search_product(name):
+    for product in Inventorys:
+        if product["name"] == name:
+            return product
+        
+        
+search = input("Search by name: ")
+result = search_product(search)
+print(result)
